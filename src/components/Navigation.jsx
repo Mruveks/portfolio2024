@@ -1,6 +1,6 @@
 import React from 'react';
 
-const sections = ['hero', 'about', 'projects', 'tech', 'cta'];
+const sections = ['hero', 'about', 'projects', 'tech', 'contact'];
 
 function Navigation() {
   const scrollToSection = (id) => {
