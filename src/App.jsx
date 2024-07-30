@@ -5,6 +5,9 @@ import Projects from "./views/Projects";
 import Hero from "./views/Hero";
 import Tech from "./views/Tech";
 import Navigation from "./components/Navigation";
+
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 import "./App.css";
 
 function App() {
