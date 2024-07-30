@@ -1,0 +1,35 @@
+body,
+html,
+#root {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+.smooth-scroll {
+  height: 100vh;
+  overflow-y: hidden; /* Hide the scroll bar */
+}
+
+section {
+  height: 100vh;
+  scroll-snap-align: start;
+}
+
+.active {
+  font-weight: bold;
+  color: #6b705c;
+  animation: active-section 1s ease-in-out;
+}
+
+@keyframes active-section {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

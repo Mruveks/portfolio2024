@@ -32,7 +32,9 @@ const Tech = () => {
   };
 
   return (
-    <div className="bg-light-beige h-full w-full flex justify-center flex-col p-16">
+    <div className="bg-light-beige h-full w-full flex justify-center flex-col p-32">
+      <h1 className="text-6xl italic pb-16">Tech Stack</h1>
+
       <div className="flex justify-around border-b text-2xl">
         <p className="w-full bg-moss-green border-r"></p>
         {categories.map((category) => (
@@ -42,7 +44,9 @@ const Tech = () => {
               setSelectedCategory(category);
               setSelectedTech(null);
             }}
-            className={`w-full border-r py-12 ${selectedCategory === category ? "bg-olive-green text-white" : "bg-moss-green"}`}
+            className={`w-full border-r py-12 ${
+              selectedCategory === category ? "bg-olive-green text-white" : "bg-moss-green"
+            }`}
           >
             {category}
           </button>

@@ -1,21 +1,3 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-/* App.css */
-
-body, html, #root {
-  height: 100%;
-  margin: 0;
-  overflow: hidden;
-}
-
-.smooth-scroll {
-  height: 100vh;
-  overflow-y: hidden; /* Hide the scroll bar */
-}
-
-section {
-  height: 100vh;
-  scroll-snap-align: start;
-}

@@ -13,27 +13,27 @@ import "./App.css";
 
 function App() {
   const sectionsRef = useRef([]);
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [activeSection, setActiveSection] = useState('hero');
   const scrollTimeoutRef = useRef(null);
 
   const handleScroll = (event) => {
     event.preventDefault();
-    
+
     if (scrollTimeoutRef.current) return;
 
     const direction = event.deltaY > 0 ? 1 : -1;
-    let nextIndex = currentIndex + direction;
-    
+    const currentIndex = sectionsRef.current.findIndex(section => section.id === activeSection);
+    const nextIndex = currentIndex + direction;
+
     if (nextIndex >= 0 && nextIndex < sectionsRef.current.length) {
-      setCurrentIndex(nextIndex);
+      setActiveSection(sectionsRef.current[nextIndex].id);
       sectionsRef.current[nextIndex].scrollIntoView({
         behavior: 'smooth'
       });
 
-      // Set timeout to prevent rapid scrolling
       scrollTimeoutRef.current = setTimeout(() => {
         scrollTimeoutRef.current = null;
-      }, 500); // Adjust the timeout duration as needed
+      }, 1000);
     }
   };
 
@@ -44,18 +44,41 @@ function App() {
     return () => {
       mainElement.removeEventListener('wheel', handleScroll);
     };
-  }, [currentIndex]);
+  }, [activeSection]);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id);
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+
+    sectionsRef.current.forEach((section) => {
+      observer.observe(section);
+    });
+
+    return () => {
+      sectionsRef.current.forEach((section) => {
+        observer.unobserve(section);
+      });
+    };
+  }, []);
 
   return (
     <div className="app">
-      <Navigation />
+      <Navigation activeSection={activeSection} />
       <main className="smooth-scroll">
-        <section id="hero" ref={el => sectionsRef.current[0] = el} tabIndex="0"><Hero /></section>
-        <section id="about" ref={el => sectionsRef.current[1] = el} tabIndex="0"><About /></section>
-        <section id="projects" ref={el => sectionsRef.current[2] = el} tabIndex="0"><Projects /></section>
-        <section id="tech" ref={el => sectionsRef.current[3] = el} tabIndex="0"><Tech /></section>
-        <span id="contact" ref={el => sectionsRef.current[4] = el} tabIndex="0"><CTA /></span>
-        <footer ><Footer /></footer>
+        <section id="hero" ref={el => sectionsRef.current[0] = el}><Hero /></section>
+        <section id="about" ref={el => sectionsRef.current[1] = el}><About /></section>
+        <section id="projects" ref={el => sectionsRef.current[2] = el}><Projects /></section>
+        <section id="tech" ref={el => sectionsRef.current[3] = el}><Tech /></section>
+        <span id="contact" ref={el => sectionsRef.current[4] = el}><CTA /></span>
+        <span><Footer /></span>
       </main>
     </div>
   );

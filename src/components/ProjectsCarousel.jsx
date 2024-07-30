@@ -44,7 +44,7 @@ const ProjectsCarousel = () => {
   ];
 
   return (
-    <div className="carousel-container relative p-16">
+    <div className="carousel-container relative pb-16">
       <Slider {...settings}>
         {projects.map((project) => (
           <div key={project.id} className="carousel-slide">
