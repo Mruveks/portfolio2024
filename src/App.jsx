@@ -5,6 +5,7 @@ import Projects from "./views/Projects";
 import Hero from "./views/Hero";
 import Tech from "./views/Tech";
 import Navigation from "./components/Navigation";
+import Footer from './views/Footer';
 
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -19,7 +20,8 @@ function App() {
         <section id="about"><About /></section>
         <section id="projects"><Projects /></section>
         <section id="tech"><Tech /></section>
-        <section id="contact"><CTA /></section>
+        <span id="contact"><CTA /></span>
+        <footer><Footer /></footer>
       </main>
     </div>
   );
