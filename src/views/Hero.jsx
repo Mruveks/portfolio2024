@@ -30,12 +30,12 @@ const Hero = () => {
   return (
     <div className="h-full w-full bg-light-beige p-16 pt-32 relative grid grid-cols-1">
       <header className="col-span-2">
-        <h1 className="text-9xl z-10 relative flex w-full justify-between">
+        <h1 className="text-9xl relative flex w-full justify-between">
           Kuba Mrowiec <p>'2024'</p>
         </h1>
         <h2 className="text-2xl">Web Developer from Warsaw, Poland</h2>
       </header>
-      <Canvas className="w-full h-full z-50">
+      <Canvas className="w-full h-full">
         <ambientLight />
         <pointLight position={[10, 10, 10]} />
         <Model />

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const sections = ['hero', 'about', 'projects', 'tech', 'contact'];
+const sections = ['hero', 'about', 'projects', 'tech', 'cta'];
 
 function Navigation() {
   const scrollToSection = (id) => {
@@ -8,7 +8,7 @@ function Navigation() {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-10 bg-soft-brown bg-opacity-90 backdrop-blur-sm">
+    <nav className="fixed top-0 left-0 right-0 z-10 bg-soft-brown bg-opacity-80 backdrop-blur-sm">
       <ul className="flex justify-end space-x-16 py-4 px-16">
         {sections.map((section) => (
           <li key={section}>
