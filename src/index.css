@@ -2,29 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
-html,
-body {
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-  font-family: "DM Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-style: normal;
-}
+/* App.css */
 
-.app {
-  height: 100vh;
-  overflow-y: auto;
-  scroll-behavior: smooth;
+body, html, #root {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
 }
 
 .smooth-scroll {
-  scroll-behavior: smooth;
+  height: 100vh;
+  overflow-y: hidden; /* Hide the scroll bar */
 }
 
 section {
   height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  scroll-snap-align: start;
 }

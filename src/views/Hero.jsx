@@ -33,7 +33,7 @@ const Hero = () => {
         <h1 className="text-9xl relative flex w-full justify-between">
           Kuba Mrowiec <p>'2024'</p>
         </h1>
-        <h2 className="text-2xl">Web Developer from Warsaw, Poland</h2>
+        <h2 className="text-2xl px-2">Web Developer from Warsaw, Poland</h2>
       </header>
       <Canvas className="w-full h-full">
         <ambientLight />
