@@ -12,9 +12,9 @@ function Navigation({ activeSection }) {
   };
 
   return (
-    <nav className="fixed flex text-xl py-8 px-16 items-center justify-between top-0 left-0 right-0 z-10 bg-soft-brown bg-opacity-80 backdrop-blur-sm">
+    <nav className="fixed flex text-xl py-4 px-32 items-center justify-between top-0 left-0 right-0 z-10 bg-soft-brown bg-opacity-80 backdrop-blur-sm">
       <button onClick={() => scrollToSection("hero")} className="cursor-pointer">
-        kubamrowiec
+        Kubamrowiec
       </button>
       <ul className="flex justify-end space-x-16">
         {sections
