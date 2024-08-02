@@ -5,6 +5,7 @@ const Tech = () => {
   const [selectedTech, setSelectedTech] = useState(null);
 
   const categories = ["Frontend", "Backend", "UX/UI", "Tools", "Data Analysis", "Services"];
+  
   const techs = {
     Frontend: ["JavaScript", "React", "HTML", "CSS", "Tailwind CSS"],
     Backend: ["Node.js", "SQL", "MongoDB", "Python", "C++"],
