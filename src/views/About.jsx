@@ -3,20 +3,21 @@ import React from "react";
 const About = () => {
   return (
     <div className="grid grid-cols-2 h-full w-full overflow-hidden">
-      <article className="p-32 text-xl bg-moss-green">
-        <header className="text-6xl pb-10 italic">About me</header>
-        What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-        been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-        scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
-        electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
-        Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus
-        PageMaker including versions of Lorem Ipsum. Why do we use it? It is a long established fact that a reader will
-        be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is
-        that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here',
-        making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum
-        as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.
-        Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and
-        the like).
+      <article className="p-16 text-lg bg-moss-green">
+        <header className="text-4xl py-10 italic">About me</header>
+        <p>
+          I'm a 24-year-old with a passion for technology, finance, and sports. My journey in programming began in 2016
+          during high school IT classes, where I learned to create simple web pages using HTML/CSS and got my first
+          taste of C++, mastering loops and basic syntax. At Warsaw University of Information Technology, I pursued
+          Computer Science, delving deeper into C++ with advanced concepts like OOP, scripting, and algorithms. Since
+          2021, I've focused on Web Development, starting with JavaScript and later incorporating the React framework.
+          My most significant project to date is DefiTracker, a site where people can look up and analyze various DeFi
+          (Decentralized Finance) projects. Beyond tech, I'm heavily invested in financial markets, particularly in
+          areas of investments, funds, and the cryptocurrency market. I enjoy staying active through gym workouts,
+          running, and swimming. I'm also a lover of extreme sports, always seeking new thrills. My career goal is to
+          become a professional Web Developer, constantly learning and creating innovative solutions in this
+          ever-evolving field.
+        </p>
       </article>
       <div className="relative">
         <img src="/about-photo.avif" className="h-full w-full object-cover" />

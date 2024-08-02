@@ -2,9 +2,11 @@ import React from "react";
 import ProjectsCarousel from "../components/ProjectsCarousel";
 const Projects = () => {
   return (
-    <div className="h-full flex flex-col justify-evenly w-full bg-beige px-32">
-      <h1 className="text-6xl italic">My Projects</h1>
-      <ProjectsCarousel />
+    <div className="h-full  w-full bg-beige p-16">
+      <h1 className="text-4xl italic py-10">My Projects</h1>
+      <article className="h-full flex flex-col">
+        <ProjectsCarousel />
+      </article>
     </div>
   );
 };

@@ -40,8 +40,8 @@ const Tech = () => {
   };
 
   return (
-    <div className="bg-light-beige h-full w-full p-32">
-      <h1 className="text-6xl italic pb-16">Tech Stack</h1>
+    <div className="bg-light-beige h-full w-full p-16">
+      <h1 className="text-4xl italic py-10 ">Tech Stack</h1>
 
       <div className="flex justify-around border-b text-4xl">
         {categories.map((category) => (

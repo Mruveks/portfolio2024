@@ -2,7 +2,7 @@ import React from "react";
 
 const CTA = () => {
   return (
-    <div className="h-[60vh] flex flex-col justify-center px-64 ">
+    <div className=" jjju flex flex-col justify-center py-16  px-64 ">
       <article className="bg-olive-green px-16 py-32 text-white grid grid-cols-2">
         <span>
           <h1 className="text-2xl relative flex flex-col w-full justify-center">

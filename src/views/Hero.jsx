@@ -28,8 +28,8 @@ const Model = () => {
 
 const Hero = () => {
   return (
-    <div className="h-full w-full bg-light-beige p-32 relative grid grid-cols-1">
-      <header className="col-span-2">
+    <div className="h-full w-full bg-light-beige p-16 relative grid grid-cols-1">
+      <header className="col-span-2 py-10">
         <h1 className="text-9xl relative flex w-full justify-between">
           Kuba Mrowiec <p>'2024'</p>
         </h1>
