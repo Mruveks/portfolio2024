@@ -8,16 +8,6 @@
   opacity: 1;
 }
 
-.carousel-content {
-  text-align: center;
-  padding: 20px;
-}
-
-.carousel-image {
-  width: 100%;
-  height: auto;
-}
-
 .carousel-title {
   font-size: 1.5rem;
   margin-top: 10px;
