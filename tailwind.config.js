@@ -4,9 +4,14 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      fontFamily: {
+        abril: ['"Abril Fatface"', "cursive"],
+        "dm-sans": ['"DM Sans"', "sans-serif"],
+      },
+
       colors: {
         "soft-brown": "#CB997E",
-        "beige": "#DDBEA9",
+        beige: "#DDBEA9",
         "light-beige": "#FFE8D6",
         "grayish-beige": "#B7B7A4",
         "moss-green": "#A5A58D",
