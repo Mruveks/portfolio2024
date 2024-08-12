@@ -77,7 +77,7 @@ const Scene = () => {
   const { camera } = useThree();
 
   useEffect(() => {
-    camera.position.set(0, 1, 2);
+    camera.position.set(0, 1, 1.8);
   }, [camera]);
 
   return (
@@ -96,7 +96,7 @@ const Hero = () => {
         <h1 className="text-8xl relative flex w-full justify-between">Kuba Mrowiec</h1>
         <h2 className="text-3xl px-2">Web Developer from Warsaw, Poland</h2>
       </header>
-      <div className="flex flex-col items-center z-50">
+      <div className="flex flex-col items-center z-20">
         <Canvas className="w-full h-full">
           <Scene />
         </Canvas>
