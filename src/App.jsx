@@ -74,7 +74,7 @@ function App() {
         <meta charSet="utf-8" />
         <title>Kuba Mrowiec</title>
         <meta name="description" content="Personal Portfolio" />
-        <link rel="icon" href="/path/to/your/favicon.ico" />
+        <link rel="icon" href="portfolio.svg" />
       </Helmet>
       <Navigation activeSection={activeSection} />
       <main className="smooth-scroll">
