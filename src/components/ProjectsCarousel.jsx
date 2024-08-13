@@ -37,11 +37,35 @@ const ProjectsCarousel = () => {
       image: "/defitracker.png",
       href: "https://kuba-mrowiec-defi-tracker.netlify.app",
     },
-    { id: 2, title: "Giard Design", description: "Description of project 2", image: "/giarddesign.png", href: "https://giarddesigns.netlify.app" },
-    { id: 3, title: "HooBank", description: "Description of project 3", image: "/hoobank.png", href: "https://kuba-mrowiec-hoobank.netlify.app" },
-    { id: 4, title: "The Museum", description: "Description of project 1", image: "/museum.png", href: "https://kuba-mrowiec-museum-website.netlify.app" },
+    {
+      id: 2,
+      title: "Giard Design",
+      description: "Description of project 2",
+      image: "/giarddesign.png",
+      href: "https://giarddesigns.netlify.app",
+    },
+    {
+      id: 3,
+      title: "HooBank",
+      description: "Description of project 3",
+      image: "/hoobank.png",
+      href: "https://kuba-mrowiec-hoobank.netlify.app",
+    },
+    {
+      id: 4,
+      title: "The Museum",
+      description: "Description of project 1",
+      image: "/museum.png",
+      href: "https://kuba-mrowiec-museum-website.netlify.app",
+    },
     { id: 5, title: "Spotify clone", description: "Description of project 2", image: "/zrzut.png", href: "" },
-    { id: 6, title: "Expense Tracker", description: "Description of project 3", image: "/expense.png", href: "https://wydatki2024.netlify.app" },
+    {
+      id: 6,
+      title: "Expense Tracker",
+      description: "Description of project 3",
+      image: "/expense.png",
+      href: "https://wydatki2024.netlify.app",
+    },
   ];
 
   return (
@@ -49,9 +73,9 @@ const ProjectsCarousel = () => {
       <Slider {...settings}>
         {projects.map((project) => (
           <div key={project.id} className="carousel-slide ">
-            <div className="m-10 rounded bg-moss-green hover:bg-olive-green duration-500 hover:text-white cursor-pointer p-4">
+            <div className="m-10 border border-black bg-moss-green hover:bg-olive-green duration-500 hover:text-white cursor-pointer p-4">
               <a href={project.href} target="__blank" className="flex gap-4 flex-col items-center">
-                <img src={project.image} alt={project.title} className="w-full h-auto rounded" />
+                <img src={project.image} alt={project.title} className="w-full h-auto border border-black" />
                 <h3 className="text-2xl ">{project.title}</h3>
                 <p className="text-md">{project.description}</p>
               </a>

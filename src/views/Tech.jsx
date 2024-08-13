@@ -11,7 +11,7 @@ const Tech = () => {
   };
 
   return (
-    <div className="h-full  w-full bg-beige p-16">
+    <div className="h-full  w-full bg-beige p-16 border-b border-black">
       <h1 className="text-4xl italic py-10">Tech Stack</h1>
       <table className="w-full border border-black">
         <thead>

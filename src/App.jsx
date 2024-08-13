@@ -14,7 +14,6 @@ function App() {
   const sectionsRef = useRef([]);
   const [activeSection, setActiveSection] = useState("hero");
   const scrollTimeoutRef = useRef(null);
-  const touchStartY = useRef(null);
 
   const handleScroll = (event) => {
     event.preventDefault();
@@ -37,41 +36,12 @@ function App() {
     }
   };
 
-  const handleTouchStart = (event) => {
-    touchStartY.current = event.touches[0].clientY;
-  };
-
-  const handleTouchEnd = (event) => {
-    const touchEndY = event.changedTouches[0].clientY;
-    const direction = touchEndY < touchStartY.current ? 1 : -1;
-
-    if (scrollTimeoutRef.current) return;
-
-    const currentIndex = sectionsRef.current.findIndex((section) => section.id === activeSection);
-    const nextIndex = currentIndex + direction;
-
-    if (nextIndex >= 0 && nextIndex < sectionsRef.current.length) {
-      setActiveSection(sectionsRef.current[nextIndex].id);
-      sectionsRef.current[nextIndex].scrollIntoView({
-        behavior: "smooth",
-      });
-
-      scrollTimeoutRef.current = setTimeout(() => {
-        scrollTimeoutRef.current = null;
-      }, 1000);
-    }
-  };
-
   useEffect(() => {
     const mainElement = document.querySelector(".smooth-scroll");
     mainElement.addEventListener("wheel", handleScroll);
-    mainElement.addEventListener("touchstart", handleTouchStart);
-    mainElement.addEventListener("touchend", handleTouchEnd);
 
     return () => {
       mainElement.removeEventListener("wheel", handleScroll);
-      mainElement.removeEventListener("touchstart", handleTouchStart);
-      mainElement.removeEventListener("touchend", handleTouchEnd);
     };
   }, [activeSection]);
 

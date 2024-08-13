@@ -11,7 +11,7 @@ html,
 
 .smooth-scroll {
   height: 100vh;
-  overflow-y: hidden; /* Hide the scroll bar */
+  overflow-y: hidden; 
 }
 
 section {
@@ -21,7 +21,7 @@ section {
 
 .active {
   font-weight: bold;
-  color: #6b705c;
+  color: #fff;
   animation: active-section 1s ease-in-out;
 }
 
@@ -30,7 +30,7 @@ section {
     transform: scale(1);
   }
   50% {
-    transform: scale(1.2);
+    transform: scale(1.1);
   }
   100% {
     transform: scale(1);

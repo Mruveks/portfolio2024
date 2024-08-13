@@ -2,8 +2,8 @@ import React from "react";
 
 const About = () => {
   return (
-    <div className="grid grid-cols-2 h-full w-full overflow-hidden">
-      <article className="p-16 text-lg bg-moss-green">
+    <div className="grid grid-cols-2 h-full w-full overflow-hidden border-b border-black">
+      <article className="p-16 text-lg bg-moss-green border-r border-black">
         <header className="text-4xl py-10 italic">About me</header>
         <p>
           I'm a 24-year-old with a passion for technology, finance, and sports. My journey in programming began in 2016

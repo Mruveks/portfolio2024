@@ -124,7 +124,7 @@ const Scene = () => {
 
 const Hero = () => {
   return (
-    <div className="h-screen w-full bg-light-beige relative overflow-hidden">
+    <div className="h-screen w-full bg-beige relative overflow-hidden border-b border-black">
       <Canvas className="absolute top-0 left-0 w-full h-full z-0">
         <Scene />
       </Canvas>

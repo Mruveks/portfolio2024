@@ -17,6 +17,19 @@ export default {
         "moss-green": "#A5A58D",
         "olive-green": "#6B705C",
       },
+      screens: {
+        // Small: 640px - 767px
+        sm: { min: "640px", max: "767px" },
+
+        // Medium: 768px - 1023px
+        md: { min: "768px", max: "1023px" },
+
+        // Large: 1024px - 1279px
+        lg: { min: "1024px", max: "1279px" },
+
+        // Extra Large: 1280px - 1535px
+        xl: { min: "1280px", max: "1535px" },
+      },
     },
   },
   plugins: [],
