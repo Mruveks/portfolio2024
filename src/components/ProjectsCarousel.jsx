@@ -58,9 +58,8 @@ const ProjectsCarousel = () => {
       image: "/museum.png",
       href: "https://kuba-mrowiec-museum-website.netlify.app",
     },
-    { id: 5, title: "Spotify clone", description: "Description of project 2", image: "/zrzut.png", href: "" },
     {
-      id: 6,
+      id: 5,
       title: "Expense Tracker",
       description: "Description of project 3",
       image: "/expense.png",
@@ -73,11 +72,10 @@ const ProjectsCarousel = () => {
       <Slider {...settings}>
         {projects.map((project) => (
           <div key={project.id} className="carousel-slide ">
-            <div className="m-10 border border-black bg-moss-green hover:bg-olive-green duration-500 hover:text-white cursor-pointer p-4">
-              <a href={project.href} target="__blank" className="flex gap-4 flex-col items-center">
+            <div className="m-10 border h-64 border-black bg-moss-green hover:bg-olive-green duration-500 hover:text-white cursor-pointer p-4">
+              <a href={project.href} target="__blank" className="flex gap-4 flex-col items-center justify-between">
                 <img src={project.image} alt={project.title} className="w-full h-auto border border-black" />
                 <h3 className="text-2xl ">{project.title}</h3>
-                <p className="text-md">{project.description}</p>
               </a>
             </div>
           </div>
